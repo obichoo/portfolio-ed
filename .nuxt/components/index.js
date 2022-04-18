@@ -1,4 +1,4 @@
-
+export { default as EdLine } from '../..\\components\\EdLine.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

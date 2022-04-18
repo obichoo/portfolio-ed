@@ -4,41 +4,51 @@
       <img class="left-side__img" src="/images/homepage-img.png" alt="" />
     </div>
     <div class="right-side">
-      <ul class="professions-list">
-        <li
-          class="professions-list__item"
-          v-for="profession in professions"
-          :key="profession"
-        >
-          {{ profession }}
-        </li>
-      </ul>
-      <div class="vline"></div>
-      <div class="subject">
-        <h1 class="subject__first-name">ED</h1>
-        <h2 class="subject__last-name">BAILLON</h2>
+      <div class="top-section">
+        <ul class="professions-list">
+          <li
+            class="professions-list__item"
+            v-for="profession in professions"
+            :key="profession"
+          >
+            <p>{{ profession }}</p>
+          </li>
+        </ul>
+        <EdLine axis="vertical" length="70%" width="2px" />
+        <div class="subject">
+          <h1 class="subject__first-name">ED</h1>
+          <h2 class="subject__last-name">BAILLON</h2>
+        </div>
       </div>
       <div class="projects">
-        <NuxtLink
-          class="project"
-          :to="project.slug"
-          v-for="(project, i) in projects"
-          :key="project.slug"
-        >
-          <p class="project__number">0{{ i + 1 }}</p>
-          <small class="project__title">{{ project.title }}</small>
-        </NuxtLink>
+        <ul>
+          <li
+            class="project"
+            v-for="(project, i) in projects"
+            :key="project.slug"
+          >
+            <NuxtLink :to="project.slug">
+              <span class="project__number">0{{ i + 1 }}</span>
+              <span class="project__title">{{ project.title }}</span>
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
-      <div class="">
-        <NuxtLink class="" to="/">some projects</NuxtLink>
-        <div class="hline"></div>
+      <div class="some-projects">
+        <NuxtLink to="/">some projects</NuxtLink>
+        <EdLine length="100px" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import EdLine from "~/components/EdLine.vue";
+
 export default {
+  components: {
+    EdLine,
+  },
   data() {
     return {
       professions: ["Art direction", "Photography", "Director", "Web Design"],
@@ -72,20 +82,63 @@ export default {
 }
 
 .right-side {
+  display: grid;
+  grid-template-rows: 70% 10% 5%;
+  gap: 7.5%;
+
+  .top-section {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+  }
+
   .professions-list {
+    padding-left: 0;
+
     &__item {
       list-style: none;
     }
   }
 
+  .subject {
+    &__first-name {
+      font-size: 10em;
+    }
+
+    &__last-name {
+      font-size: 5rem;
+    }
+  }
+
   .projects {
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .project {
-      text-decoration: none;
-      color: black;
-      & * {
+      list-style: none;
+      
+      a {
+        display: flex;
+        color: black;
+        text-decoration: none;
         opacity: 0.5;
+        flex-direction: column;
+        width: max-content;
+
+        span {
+          text-align: center;
+        }
       }
     }
+  }
+
+  .some-projects {
+    text-align: right;
+    font-family: 'Montserrat';
+    text-decoration: none;
+
   }
 }
 </style>

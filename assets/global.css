@@ -1,0 +1,18 @@
+p {
+  font-family: "Gilmer";
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Monument";
+  margin: 0;
+}
+
+li {
+  font-family: "Qaitan";
+}
