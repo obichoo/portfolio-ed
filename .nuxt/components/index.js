@@ -1,4 +1,5 @@
 export { default as EdLine } from '../..\\components\\EdLine.vue'
+export { default as EdPageLink } from '../..\\components\\EdPageLink.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

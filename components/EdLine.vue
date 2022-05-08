@@ -34,7 +34,6 @@ export default {
 
 <style scoped>
 .line {
-  
   background-color: var(--line-color);
   display: inline-block;
 }

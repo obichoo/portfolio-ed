@@ -1,5 +1,8 @@
 {
   "EdLine": {
     "description": "Auto imported from components/EdLine.vue"
+  },
+  "EdPageLink": {
+    "description": "Auto imported from components/EdPageLink.vue"
   }
 }
