@@ -34,7 +34,7 @@
           </li>
         </ul>
       </div>
-      <EdPageLink message="Some projects" />
+      <EdPageLink message="Introduction" link="/introduction" />
     </div>
   </div>
 </template>

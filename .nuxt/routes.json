@@ -3,14 +3,12 @@
     "name": "Introduction",
     "path": "/Introduction",
     "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Introduction.vue",
-    "chunkName": "pages/Introduction",
-    "_name": "_ebd4f222"
+    "chunkName": "pages/Introduction"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_f63fb826"
+    "chunkName": "pages/index"
   }
 ]

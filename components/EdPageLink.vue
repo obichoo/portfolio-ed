@@ -1,7 +1,8 @@
 <template>
   <div class="page-link">
+    <EdLine width="2px" length="100px" v-if="align == 'left'" />
     <a :href="link">{{ message }}</a>
-    <EdLine width="2px" length="100px" />
+    <EdLine width="2px" length="100px" v-if="align == 'right'"/>
   </div>
 </template>
 
@@ -16,6 +17,10 @@ export default {
       type: String,
       default: "/",
     },
+    align: {
+      type: String,
+      default: 'right'
+    }
   },
 };
 </script>

@@ -1,40 +1,20 @@
 <template>
-  <div class="homepage">
+  <div class="introduction">
     <div class="left-side">
-      <img class="left-side__img" src="/images/homepage-img.png" alt="" />
+      <img class="left-side__img" src="/images/introduction-img.jpg" alt="" />
     </div>
     <div class="right-side">
-      <div class="top-section">
-        <ul class="professions-list">
-          <li
-            class="professions-list__item"
-            v-for="profession in professions"
-            :key="profession"
-          >
-            <p>{{ profession }}</p>
-          </li>
-        </ul>
-        <EdLine axis="vertical" length="70%" width="2px" />
-        <div class="subject">
-          <h1 class="subject__first-name">ED</h1>
-          <h2 class="subject__last-name">BAILLON</h2>
-        </div>
+      <h1>Me</h1>
+      <p class="introduction-text">
+        I'm <span class="first-name">Edouard</span>, Graphic student in Paris
+        and Assistant Art Director at Redfuse On the way to become Art Director.
+        I also like Video and Photography and everything around.
+      </p>
+
+      <div class="page-links">
+        <EdPageLink align="left" message="Home" />
+        <EdPageLink message="Some projects" />
       </div>
-      <div class="projects">
-        <ul>
-          <li
-            class="project"
-            v-for="(project, i) in projects"
-            :key="project.slug"
-          >
-            <NuxtLink :to="project.slug">
-              <span class="project__number">0{{ i + 1 }}</span>
-              <span class="project__title">{{ project.title }}</span>
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-      <EdPageLink message="Some projects" />
     </div>
   </div>
 </template>
@@ -64,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.homepage {
+.introduction {
   display: grid;
   grid-template-columns: 40% calc(60% - 40px);
   gap: 40px;
@@ -73,64 +53,25 @@ export default {
 }
 
 .left-side {
+  overflow: hidden;
+
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 30%;
   }
 }
 
 .right-side {
-  display: grid;
-  grid-template-rows: 70% 10% 5%;
-  gap: 7.5%;
-
-  .top-section {
-    display: flex;
-    gap: 5%;
-    align-items: center;
+  h1 {
+    font-family: "Qaitan";
+    font-size: 94px;
   }
 
-  .professions-list {
-    padding-left: 0;
-
-    &__item {
-      list-style: none;
-    }
-  }
-
-  .subject {
-    &__first-name {
-      font-size: 10em;
-    }
-
-    &__last-name {
-      font-size: 5rem;
-    }
-  }
-
-  .projects {
-    ul {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .project {
-      list-style: none;
-
-      a {
-        display: flex;
-        color: black;
-        text-decoration: none;
-        opacity: 0.5;
-        flex-direction: column;
-        width: max-content;
-
-        span {
-          text-align: center;
-        }
-      }
-    }
+  .first-name {
+    font-style: italic;
+    font-size: 120%;
   }
 }
 </style>
