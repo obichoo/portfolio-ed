@@ -1,7 +1,7 @@
 <template>
   <div class="homepage">
     <div class="left-side">
-      <img class="left-side__img" src="/images/homepage-img.png" alt="" />
+      <img class="left-side__img" loading="eager" src="/images/homepage-img.png" alt="" />
     </div>
     <div class="right-side">
       <div class="top-section">
@@ -127,6 +127,7 @@ export default {
 
     .project {
       list-style: none;
+      font-weight: 900;
 
       a {
         display: flex;

@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <div class="left-side">
-      <img class="left-side__img" src="/images/introduction-img.jpg" alt="" />
+      <img class="left-side__img" loading="eager" src="/images/introduction-img.jpg" alt="" />
     </div>
     <div class="right-side">
       <h1>Me</h1>

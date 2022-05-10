@@ -5,18 +5,7 @@
 </template>
 
 <script>
-export default {
-  transition(to, from) {
-    console.log(
-      $nuxt.$store.state.pages[from.name],
-      $nuxt.$store.state.pages[to.name]
-    );
-    if (!from) {
-      return "slide-left";
-    }
-    return +to.query.page < +from.query.page ? "slide-right" : "slide-left";
-  },
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -25,24 +14,37 @@ html {
 }
 
 .slide-left-enter-active,
-.slide-left-leave-active {
+.slide-left-leave-active,
+.slide-left-enter,
+.slide-left-leave,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-right-enter,
+.slide-right-leave {
   transition: all 0.5s;
 }
 
-.slide-left-enter,
+.slide-left-enter-active {
+  transform: translateX(0);
+}
+
 .slide-left-leave-active {
-  opacity: 0;
   transform: translateX(-100vw);
 }
 
-.slide-right-enter-active,
-.slide-right-leave-active {
-  transition: all 0.5s;
+.slide-left-enter {
+  transform: translateX(100vw);
 }
 
-.slide-right-enter,
+.slide-right-enter-active {
+  transform: translateX(0);
+}
+
 .slide-right-leave-active {
-  opacity: 0;
   transform: translateX(100vw);
+}
+
+.slide-right-enter {
+  transform: translateX(-100vw);
 }
 </style>
