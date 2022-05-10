@@ -44,6 +44,16 @@ import EdLine from "~/components/EdLine.vue";
 import EdPageLink from "~/components/EdPageLink.vue";
 
 export default {
+  name: "Homepage",
+  transition(to, from) {
+    if (!from) {
+      return "slide-left";
+    }
+    return $nuxt.$store.state.pages[from.name] <
+      $nuxt.$store.state.pages[to.name]
+      ? "slide-left"
+      : "slide-right";
+  },
   components: {
     EdLine,
     EdPageLink,

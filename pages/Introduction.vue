@@ -24,6 +24,7 @@ import EdLine from "~/components/EdLine.vue";
 import EdPageLink from "~/components/EdPageLink.vue";
 
 export default {
+  name: "Introduction",
   components: {
     EdLine,
     EdPageLink,

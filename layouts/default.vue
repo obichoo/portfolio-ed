@@ -6,10 +6,15 @@
 
 <script>
 export default {
-  transition: {
-    afterLeave(el) {
-      console.log("afterLeave", el);
-    },
+  transition(to, from) {
+    console.log(
+      $nuxt.$store.state.pages[from.name],
+      $nuxt.$store.state.pages[to.name]
+    );
+    if (!from) {
+      return "slide-left";
+    }
+    return +to.query.page < +from.query.page ? "slide-right" : "slide-left";
   },
 };
 </script>
@@ -19,13 +24,24 @@ html {
   overflow: hidden;
 }
 
-.page-enter-active,
-.page-leave-active {
+.slide-left-enter-active,
+.slide-left-leave-active {
   transition: all 0.5s;
 }
 
-.page-enter,
-.page-leave-active {
+.slide-left-enter,
+.slide-left-leave-active {
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.5s;
+}
+
+.slide-right-enter,
+.slide-right-leave-active {
   opacity: 0;
   transform: translateX(100vw);
 }
