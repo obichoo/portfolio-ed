@@ -1,7 +1,7 @@
 <template>
   <div class="page-link">
     <EdLine width="2px" length="100px" v-if="align == 'left'" />
-    <a :href="link">{{ message }}</a>
+    <NuxtLink :to="link">{{ message }}</NuxtLink>
     <EdLine width="2px" length="100px" v-if="align == 'right'"/>
   </div>
 </template>
