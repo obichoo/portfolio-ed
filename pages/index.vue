@@ -1,7 +1,12 @@
 <template>
-  <div class="homepage">
+  <div id="homepage">
     <div class="left-side">
-      <img class="left-side__img" loading="eager" src="/images/homepage-img.png" alt="" />
+      <img
+        class="left-side__img"
+        loading="eager"
+        src="/images/homepage-img.png"
+        alt=""
+      />
     </div>
     <div class="right-side">
       <div class="top-section">
@@ -45,12 +50,17 @@ import EdPageLink from "~/components/EdPageLink.vue";
 
 export default {
   name: "Homepage",
+  head() {
+    return {
+      title: "Ed - Homepage",
+    };
+  },
   transition(to, from) {
     if (!from) {
       return "slide-left";
     }
-    return $nuxt.$store.state.pages[from.name] <
-      $nuxt.$store.state.pages[to.name]
+    return $nuxt.$store.state.pages [from.fullPath] <
+      $nuxt.$store.state.pages [to.fullPath]
       ? "slide-left"
       : "slide-right";
   },
@@ -63,7 +73,7 @@ export default {
       professions: ["Art direction", "Photography", "Director", "Web Design"],
       projects: [
         { title: "Photography", slug: "photography" },
-        { title: "Video Resume", slug: "resume" },
+        { title: "Video Resume", slug: "video-resume" },
         { title: "Short Film", slug: "short-film" },
         { title: "3D Poster", slug: "3d-poster" },
         { title: "Unfilperdu", slug: "unfilperdu" },
@@ -74,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.homepage {
+#homepage {
   display: grid;
   grid-template-columns: 40% calc(60% - 40px);
   gap: 40px;

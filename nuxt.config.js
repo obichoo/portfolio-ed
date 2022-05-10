@@ -31,4 +31,27 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  router: {
+    extendRoutes(routes, resolve) {
+      return [
+        ...routes,
+        {
+          name: "Video Resume",
+          path: "/video-resume",
+          component: resolve(__dirname, "pages/VideoResume.vue"),
+        },
+        {
+          name: "Short Film",
+          path: "/short-film",
+          component: resolve(__dirname, "pages/ShortFilm.vue"),
+        },
+        {
+          name: "3D Poster",
+          path: "/3d-poster",
+          component: resolve(__dirname, "pages/3DPoster.vue"),
+        },
+      ];
+    },
+  },
 };

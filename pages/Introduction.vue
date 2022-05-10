@@ -1,19 +1,25 @@
 <template>
-  <div class="introduction">
+  <div id="introduction">
     <div class="left-side">
-      <img class="left-side__img" loading="eager" src="/images/introduction-img.jpg" alt="" />
+      <img
+        class="left-side__img"
+        loading="eager"
+        src="/images/introduction-img.jpg"
+        alt=""
+      />
     </div>
     <div class="right-side">
       <h1>Me</h1>
       <p class="introduction-text">
-        I'm <span class="first-name">Edouard</span>, Graphic student in Paris
-        and Assistant Art Director at Redfuse On the way to become Art Director.
+        I'm <span class="first-name">Edouard</span>,<br />
+        Graphic student in Paris and Assistant Art Director at Redfuse.<br />
+        On the way to become Art Director.<br />
         I also like Video and Photography and everything around.
       </p>
 
       <div class="page-links">
         <EdPageLink align="left" message="Home" />
-        <EdPageLink message="Some projects" />
+        <EdPageLink link="/photography" message="Some projects" />
       </div>
     </div>
   </div>
@@ -25,27 +31,25 @@ import EdPageLink from "~/components/EdPageLink.vue";
 
 export default {
   name: "Introduction",
-  components: {
-    EdLine,
-    EdPageLink,
-  },
-  data() {
+  head() {
     return {
-      professions: ["Art direction", "Photography", "Director", "Web Design"],
-      projects: [
-        { title: "Photography", slug: "photography" },
-        { title: "Video Resume", slug: "resume" },
-        { title: "Short Film", slug: "short-film" },
-        { title: "3D Poster", slug: "3d-poster" },
-        { title: "Unfilperdu", slug: "unfilperdu" },
-      ],
+      title: "Ed - Introduction",
     };
+  },
+  transition(to, from) {
+    if (!from) {
+      return "slide-left";
+    }
+    return $nuxt.$store.state.pages[from.fullPath] <
+      $nuxt.$store.state.pages[to.fullPath]
+      ? "slide-left"
+      : "slide-right";
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.introduction {
+#introduction {
   display: grid;
   grid-template-columns: 40% calc(60% - 40px);
   gap: 40px;
@@ -65,14 +69,33 @@ export default {
 }
 
 .right-side {
+  padding-left: 50px;
+  padding-top: 50px;
+  position: relative;
+
   h1 {
     font-family: "Qaitan";
     font-size: 94px;
   }
 
+  .introduction-text {
+    width: 50%;
+    line-height: 2em;
+    margin-top: 50px;
+  }
+
   .first-name {
     font-style: italic;
     font-size: 120%;
+    font-weight: 500;
+  }
+
+  .page-links {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: space-between;
   }
 }
 </style>
