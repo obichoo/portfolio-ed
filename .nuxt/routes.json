@@ -2,68 +2,68 @@
   {
     "name": "3DPoster",
     "path": "/3DPoster",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
     "chunkName": "pages/3DPoster",
-    "_name": "_4c9f135a"
+    "_name": "_0cce816a"
   },
   {
     "name": "Introduction",
     "path": "/Introduction",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Introduction.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Introduction.vue",
     "chunkName": "pages/Introduction",
-    "_name": "_ebd4f222"
+    "_name": "_7a4093e7"
   },
   {
     "name": "Photography",
     "path": "/Photography",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Photography.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Photography.vue",
     "chunkName": "pages/Photography",
-    "_name": "_294ba0d8"
+    "_name": "_418f14e0"
   },
   {
     "name": "ShortFilm",
     "path": "/ShortFilm",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
     "chunkName": "pages/ShortFilm",
-    "_name": "_466caaca"
+    "_name": "_8c2afeba"
   },
   {
     "name": "UnFilPerdu",
     "path": "/UnFilPerdu",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\UnFilPerdu.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\UnFilPerdu.vue",
     "chunkName": "pages/UnFilPerdu",
-    "_name": "_5a694db3"
+    "_name": "_216338ab"
   },
   {
     "name": "VideoResume",
     "path": "/VideoResume",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
     "chunkName": "pages/VideoResume",
-    "_name": "_3f86ba43"
+    "_name": "_57ca2e4b"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_f63fb826"
+    "_name": "_21ad3df5"
   },
   {
     "name": "Video Resume",
     "path": "/video-resume",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
-    "_name": "_3f86ba43"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
+    "_name": "_57ca2e4b"
   },
   {
     "name": "Short Film",
     "path": "/short-film",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
-    "_name": "_466caaca"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
+    "_name": "_8c2afeba"
   },
   {
     "name": "3D Poster",
     "path": "/3d-poster",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
-    "_name": "_4c9f135a"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
+    "_name": "_0cce816a"
   }
 ]
