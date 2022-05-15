@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0cce816a = () => interopDefault(import('..\\pages\\3DPoster.vue' /* webpackChunkName: "pages/3DPoster" */))
-const _7a4093e7 = () => interopDefault(import('..\\pages\\Introduction.vue' /* webpackChunkName: "pages/Introduction" */))
-const _418f14e0 = () => interopDefault(import('..\\pages\\Photography.vue' /* webpackChunkName: "pages/Photography" */))
-const _8c2afeba = () => interopDefault(import('..\\pages\\ShortFilm.vue' /* webpackChunkName: "pages/ShortFilm" */))
-const _216338ab = () => interopDefault(import('..\\pages\\UnFilPerdu.vue' /* webpackChunkName: "pages/UnFilPerdu" */))
-const _57ca2e4b = () => interopDefault(import('..\\pages\\VideoResume.vue' /* webpackChunkName: "pages/VideoResume" */))
-const _21ad3df5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _4c9f135a = () => interopDefault(import('..\\pages\\3DPoster.vue' /* webpackChunkName: "pages/3DPoster" */))
+const _ebd4f222 = () => interopDefault(import('..\\pages\\Introduction.vue' /* webpackChunkName: "pages/Introduction" */))
+const _294ba0d8 = () => interopDefault(import('..\\pages\\Photography.vue' /* webpackChunkName: "pages/Photography" */))
+const _466caaca = () => interopDefault(import('..\\pages\\ShortFilm.vue' /* webpackChunkName: "pages/ShortFilm" */))
+const _5a694db3 = () => interopDefault(import('..\\pages\\UnFilPerdu.vue' /* webpackChunkName: "pages/UnFilPerdu" */))
+const _3f86ba43 = () => interopDefault(import('..\\pages\\VideoResume.vue' /* webpackChunkName: "pages/VideoResume" */))
+const _f63fb826 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,43 +25,43 @@ export const routerOptions = {
 
   routes: [{
     path: "/3DPoster",
-    component: _0cce816a,
+    component: _4c9f135a,
     name: "3DPoster"
   }, {
     path: "/Introduction",
-    component: _7a4093e7,
+    component: _ebd4f222,
     name: "Introduction"
   }, {
     path: "/Photography",
-    component: _418f14e0,
+    component: _294ba0d8,
     name: "Photography"
   }, {
     path: "/ShortFilm",
-    component: _8c2afeba,
+    component: _466caaca,
     name: "ShortFilm"
   }, {
     path: "/UnFilPerdu",
-    component: _216338ab,
+    component: _5a694db3,
     name: "UnFilPerdu"
   }, {
     path: "/VideoResume",
-    component: _57ca2e4b,
+    component: _3f86ba43,
     name: "VideoResume"
   }, {
     path: "/",
-    component: _21ad3df5,
+    component: _f63fb826,
     name: "index"
   }, {
     path: "/video-resume",
-    component: _57ca2e4b,
+    component: _3f86ba43,
     name: "Video Resume"
   }, {
     path: "/short-film",
-    component: _8c2afeba,
+    component: _466caaca,
     name: "Short Film"
   }, {
     path: "/3d-poster",
-    component: _0cce816a,
+    component: _4c9f135a,
     name: "3D Poster"
   }],
 

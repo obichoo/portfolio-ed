@@ -1,17 +1,38 @@
 <template>
   <div id="photography">
     <div class="page-view view-1">
-      <h1 class="project-title">Photography</h1>
-      <EdPageLink class="next-project" link="/video-resume" message="Next" />
+      <div>
+        <img
+          v-view.once
+          class="focus"
+          src="/images/photography/camera-focus.svg"
+          alt=""
+        />
+        <h1 v-view.once class="project-title">Photography</h1>
+      </div>
+      <EdBreadcrumb
+        :previousLink="{ link: '/introduction', message: 'Introduction' }"
+        :nextLink="{ link: '/video-resume' }"
+      />
     </div>
 
     <div class="page-view view-2">
-      <img src="/images/photography/photography-view-2-1.jpg" alt="" />
-      <img src="/images/photography/photography-view-2-2.jpg" alt="" />
+      <img
+        class="solo-image"
+        src="/images/photography/photography-view-2-1.jpg"
+        alt=""
+      />
+      <img
+        class="solo-image"
+        src="/images/photography/photography-view-2-2.jpg"
+        alt=""
+      />
     </div>
 
     <div class="page-view view-3">
-      <h1 class="project-title">More ?</h1>
+      <h2 v-view.once class="project-title more">
+        More <span class="q-mark">?</span>
+      </h2>
     </div>
 
     <div class="page-view view-4">
@@ -43,6 +64,11 @@
         <img src="/images/photography/photography-view-4-13.jpg" alt="" />
       </div>
     </div>
+
+    <EdFooter
+      :nextLink="{ link: '/video-resume' }"
+      :previousLink="{ link: '/introduction', message: 'Home ' }"
+    />
   </div>
 </template>
 
@@ -58,6 +84,12 @@ export default {
     if (!from) {
       return "slide-left";
     }
+    if (
+      $nuxt.$store.state.pages[from.fullPath] == 7 &&
+      $nuxt.$store.state.pages[to.fullPath] == 1
+    ) {
+      return "slide-left";
+    }
     return $nuxt.$store.state.pages[from.fullPath] <
       $nuxt.$store.state.pages[to.fullPath]
       ? "slide-left"
@@ -70,6 +102,28 @@ export default {
 #photography {
   .project-title {
     font-family: "Qaitan";
+    filter: blur(10px);
+    transition: filter 1s ease-in 0.5s;
+
+    &.view-in {
+      filter: blur(0px);
+    }
+  }
+
+  .focus {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    height: 80%;
+    object-fit: contain;
+    opacity: 0.1;
+    transition: opacity 0.2s linear 2s;
+
+    &.view-in {
+      opacity: 0;
+    }
   }
 
   .view-2 {
@@ -85,11 +139,34 @@ export default {
   .view-4 {
     padding: 0 20px;
     width: calc(100% - 40px);
+  }
 
-    .images-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 50px;
+  // @include
+  // .images-row-1 {
+  //   padding: 0 20px;
+  // }
+
+  #footer {
+    padding: 70px 20px;
+    width: calc(100% - 40px);
+  }
+
+  .more {
+    width: 0px;
+    overflow: hidden;
+    transition: all 0s ease 1s, width 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    .q-mark {
+      opacity: 0;
+      transition-delay: 2s;
+    }
+
+    &.view-in--gt-half {
+      width: 400px;
+
+      .q-mark {
+        opacity: 1;
+      }
     }
   }
 }

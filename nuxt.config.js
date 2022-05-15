@@ -15,10 +15,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["assets/global.css", "assets/fonts.css"],
+  css: ["assets/global.css", "assets/fonts.css", "assets/breakpoints.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/VueCheckView.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -27,7 +27,11 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/style-resources"],
+
+  styleResources: {
+    scss: ["assets/*.scss"],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

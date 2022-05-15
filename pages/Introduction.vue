@@ -26,9 +26,6 @@
 </template>
 
 <script>
-import EdLine from "~/components/EdLine.vue";
-import EdPageLink from "~/components/EdPageLink.vue";
-
 export default {
   name: "Introduction",
   head() {
@@ -38,6 +35,9 @@ export default {
   },
   transition(to, from) {
     if (!from) {
+      return "slide-left";
+    }
+if ($nuxt.$store.state.pages[from.fullPath] == 7 && $nuxt.$store.state.pages[to.fullPath] == 1) {
       return "slide-left";
     }
     return $nuxt.$store.state.pages[from.fullPath] <
@@ -82,6 +82,7 @@ export default {
     width: 50%;
     line-height: 2em;
     margin-top: 50px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
   }
 
   .first-name {

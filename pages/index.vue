@@ -59,6 +59,9 @@ export default {
     if (!from) {
       return "slide-left";
     }
+if ($nuxt.$store.state.pages[from.fullPath] == 7 && $nuxt.$store.state.pages[to.fullPath] == 1) {
+      return "slide-left";
+    }
     return $nuxt.$store.state.pages [from.fullPath] <
       $nuxt.$store.state.pages [to.fullPath]
       ? "slide-left"
@@ -88,7 +91,7 @@ export default {
   display: grid;
   grid-template-columns: 40% calc(60% - 40px);
   gap: 40px;
-  margin: 100px 122px;
+  padding: 100px 122px;
   height: calc(100vh - 200px);
 }
 

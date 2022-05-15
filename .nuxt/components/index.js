@@ -1,3 +1,5 @@
+export { default as EdBreadcrumb } from '../..\\components\\EdBreadcrumb.vue'
+export { default as EdFooter } from '../..\\components\\EdFooter.vue'
 export { default as EdLine } from '../..\\components\\EdLine.vue'
 export { default as EdPageLink } from '../..\\components\\EdPageLink.vue'
 

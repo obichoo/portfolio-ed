@@ -1,4 +1,10 @@
 {
+  "EdBreadcrumb": {
+    "description": "Auto imported from components/EdBreadcrumb.vue"
+  },
+  "EdFooter": {
+    "description": "Auto imported from components/EdFooter.vue"
+  },
   "EdLine": {
     "description": "Auto imported from components/EdLine.vue"
   },

@@ -1,8 +1,10 @@
 <template>
   <div class="page-link">
-    <EdLine width="2px" length="100px" v-if="align == 'left'" />
-    <NuxtLink :to="link">{{ message }}</NuxtLink>
-    <EdLine width="2px" length="100px" v-if="align == 'right'" />
+    <EdLine width="2px" length="100px" v-if="align == 'left'" :color="color" />
+    <NuxtLink :class="{ dark: color == 'white' }" :to="link">{{
+      message
+    }}</NuxtLink>
+    <EdLine width="2px" length="100px" v-if="align == 'right'" :color="color" />
   </div>
 </template>
 
@@ -21,6 +23,10 @@ export default {
       type: String,
       default: "right",
     },
+    color: {
+      type: String,
+      default: "black",
+    },
   },
 };
 </script>
@@ -31,7 +37,7 @@ export default {
   justify-content: flex-end;
   gap: 10px;
   align-items: flex-end;
-  
+
   a {
     font-family: "Montserrat";
     text-decoration: none;
