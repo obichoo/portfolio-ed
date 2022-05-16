@@ -64,5 +64,10 @@ export default {
   .next-project {
     margin-left: auto;
   }
+
+  @include lg {
+    padding: 0 50px;
+    width: calc(100% - 100px);
+  }
 }
 </style>

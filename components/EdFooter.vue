@@ -68,6 +68,14 @@ export default {
     color: black;
     text-decoration: none;
     font-weight: 700;
+
+    @include lg {
+      font-size: 12px;
+    }
+
+    @include sm {
+      font-size: 10px;
+    }
   }
 }
 </style>

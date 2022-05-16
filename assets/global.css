@@ -132,3 +132,10 @@ img.solo-image  {
   max-width: 30%;
   object-fit: cover;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .project-title {
+    font-size: 70px;
+  }
+}

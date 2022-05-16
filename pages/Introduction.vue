@@ -1,12 +1,7 @@
 <template>
   <div id="introduction">
     <div class="left-side">
-      <img
-        class="left-side__img"
-        loading="eager"
-        src="/images/introduction-img.jpg"
-        alt=""
-      />
+      <img src="/images/introduction-img.jpg" class="left-side__img" alt="">
     </div>
     <div class="right-side">
       <h1>Me</h1>
@@ -37,13 +32,26 @@ export default {
     if (!from) {
       return "slide-left";
     }
-if ($nuxt.$store.state.pages[from.fullPath] == 7 && $nuxt.$store.state.pages[to.fullPath] == 1) {
+    if (
+      $nuxt.$store.state.pages[from.fullPath] == 7 &&
+      $nuxt.$store.state.pages[to.fullPath] == 1
+    ) {
       return "slide-left";
     }
     return $nuxt.$store.state.pages[from.fullPath] <
       $nuxt.$store.state.pages[to.fullPath]
       ? "slide-left"
       : "slide-right";
+  },
+  mounted() {
+    // const leftSide = document.querySelector('.left-side');
+    // const img = new Image();
+    // img.src = "/images/introduction-img.jpg";
+    // img.alt = "";
+    // img.classList = ["left-side__img"];
+    // img.setAttribute(`data-v-${Object.keys(leftSide.dataset)[0].slice(1,Object.keys(leftSide.dataset)[0].length)}`,'')
+
+    // leftSide.appendChild(img);
   },
 };
 </script>
@@ -82,7 +90,8 @@ if ($nuxt.$store.state.pages[from.fullPath] == 7 && $nuxt.$store.state.pages[to.
     width: 50%;
     line-height: 2em;
     margin-top: 50px;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: name duration timing-function delay iteration-count direction
+      fill-mode;
   }
 
   .first-name {

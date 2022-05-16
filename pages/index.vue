@@ -1,12 +1,7 @@
 <template>
   <div id="homepage">
     <div class="left-side">
-      <img
-        class="left-side__img"
-        loading="eager"
-        src="/images/homepage-img.png"
-        alt=""
-      />
+      <img class="left-side__img" src="/images/homepage-img.png" alt="" />
     </div>
     <div class="right-side">
       <div class="top-section">
@@ -59,11 +54,14 @@ export default {
     if (!from) {
       return "slide-left";
     }
-if ($nuxt.$store.state.pages[from.fullPath] == 7 && $nuxt.$store.state.pages[to.fullPath] == 1) {
+    if (
+      $nuxt.$store.state.pages[from.fullPath] == 7 &&
+      $nuxt.$store.state.pages[to.fullPath] == 1
+    ) {
       return "slide-left";
     }
-    return $nuxt.$store.state.pages [from.fullPath] <
-      $nuxt.$store.state.pages [to.fullPath]
+    return $nuxt.$store.state.pages[from.fullPath] <
+      $nuxt.$store.state.pages[to.fullPath]
       ? "slide-left"
       : "slide-right";
   },
