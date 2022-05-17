@@ -29,25 +29,25 @@
       />
     </div>
 
-    <div class="page-view view-3">
-      <h2 v-view.once class="project-title more">
+    <div class="page-view view-3 centered">
+      <h2 v-view.once class="more">
         More <span class="q-mark">?</span>
       </h2>
     </div>
 
     <div class="page-view view-4">
-      <div class="images-row images-row-2">
+      <div class="images-row images-row-2 break-images-row">
         <img src="/images/photography/photography-view-4-1.jpg" alt="" />
         <img src="/images/photography/photography-view-4-2.jpg" alt="" />
       </div>
 
-      <div class="images-row images-row-3">
+      <div class="images-row images-row-3 break-images-row">
         <img src="/images/photography/photography-view-4-3.jpg" alt="" />
         <img src="/images/photography/photography-view-4-4.jpg" alt="" />
         <img src="/images/photography/photography-view-4-5.jpg" alt="" />
       </div>
 
-      <div class="images-row images-row-3">
+      <div class="images-row images-row-3 break-images-row">
         <img src="/images/photography/photography-view-4-6.jpg" alt="" />
         <img src="/images/photography/photography-view-4-7.jpg" alt="" />
         <img src="/images/photography/photography-view-4-8.jpg" alt="" />
@@ -58,7 +58,7 @@
         <img src="/images/photography/photography-view-4-10.jpg" alt="" />
       </div>
 
-      <div class="images-row images-row-3">
+      <div class="images-row images-row-3 break-images-row">
         <img src="/images/photography/photography-view-4-11.jpg" alt="" />
         <img src="/images/photography/photography-view-4-12.jpg" alt="" />
         <img src="/images/photography/photography-view-4-13.jpg" alt="" />
@@ -141,11 +141,6 @@ export default {
     width: calc(100% - 40px);
   }
 
-  // @include
-  // .images-row-1 {
-  //   padding: 0 20px;
-  // }
-
   #footer {
     padding: 70px 20px;
     width: calc(100% - 40px);
@@ -155,13 +150,20 @@ export default {
     width: 0px;
     overflow: hidden;
     transition: all 0s ease .5s, width 1s cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    font-family: "Qaitan";
+    font-size: 140px;
+    white-space: nowrap;
+
+    @include lg {
+      font-size: 70px;
+    }
 
     .q-mark {
       opacity: 0;
       transition-delay: 1.5s;
     }
 
-    &.view-in--gt-half {
+    &.view-in--gt-half, &.view-in {
       width: 400px;
 
       @include lg {

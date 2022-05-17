@@ -106,9 +106,10 @@ export default {
     & > span {
       color: black;
       display: inline-block;
+      transition: color 0s linear 1.4s;
 
       &.part-one::before {
-        transition: width 0.3s ease 1s, margin-left 0.3s ease 1.4s, color 0s linear 1.3s;
+        transition: width 0.3s ease 1s, margin-left 0.3s ease 1.4s, color 0s linear 1.3s, right 0s linear 1.4s;
       }
 
       &.part-two::before {
@@ -129,8 +130,9 @@ export default {
       & > span {
         color: white;
 
-        &::before {
-          width: 100%;
+        &.part-one::before {
+          width: 72%;
+          right: 28%;
           margin-left: 100%;
         }
       }
@@ -147,6 +149,8 @@ export default {
     &.play-btn {
       width: 650px;
       margin-left: -80px;
+      max-height: 80vh;
+
     }
 
     &.resume {
