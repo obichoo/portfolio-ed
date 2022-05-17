@@ -2,58 +2,58 @@
   {
     "name": "3DPoster",
     "path": "/3DPoster",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue",
     "chunkName": "pages/3DPoster"
   },
   {
     "name": "Introduction",
     "path": "/Introduction",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Introduction.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Introduction.vue",
     "chunkName": "pages/Introduction"
   },
   {
     "name": "Photography",
     "path": "/Photography",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Photography.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\Photography.vue",
     "chunkName": "pages/Photography"
   },
   {
     "name": "ShortFilm",
     "path": "/ShortFilm",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue",
     "chunkName": "pages/ShortFilm"
   },
   {
     "name": "UnFilPerdu",
     "path": "/UnFilPerdu",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\UnFilPerdu.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\UnFilPerdu.vue",
     "chunkName": "pages/UnFilPerdu"
   },
   {
     "name": "VideoResume",
     "path": "/VideoResume",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue",
     "chunkName": "pages/VideoResume"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "Video Resume",
     "path": "/video-resume",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\VideoResume.vue"
   },
   {
     "name": "Short Film",
     "path": "/short-film",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\ShortFilm.vue"
   },
   {
     "name": "3D Poster",
     "path": "/3d-poster",
-    "component": "C:\\\\Users\\\\aubin\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue"
+    "component": "C:\\\\Users\\\\Développeur\\\\Documents\\\\GitHub\\\\portfolio-ed\\\\pages\\\\3DPoster.vue"
   }
 ]

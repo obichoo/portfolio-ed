@@ -22,8 +22,11 @@
       />
     </div>
 
-    <div class="page-view dark view-2">
-      <h2 class="project-title subtitle">I'm a filmmaker and ?</h2>
+    <div class="page-view dark view-2 centered">
+      <h2 class="subtitle filmmaker" v-view.once>
+        <span class="part-one">I'm a filmmaker</span>
+        <span class="part-two">and ?</span>
+      </h2>
     </div>
 
     <div class="page-view dark view-3">
@@ -95,6 +98,45 @@ export default {
     }
   }
 
+  .filmmaker {
+    font-family: "Gilmer";
+    position: relative;
+    overflow: hidden;
+
+    & > span {
+      color: black;
+      display: inline-block;
+
+      &.part-one::before {
+        transition: width 0.3s ease 1s, margin-left 0.3s ease 1.4s, color 0s linear 1.3s;
+      }
+
+      &.part-two::before {
+        transition: width 0.3s ease 1.7s, margin-left 0.3s ease 2.1s, color 0s linear 2s;
+      }
+    }
+
+    & > span::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      margin-left: 0%;
+      height: 48px;
+      background-color: white;
+    }
+
+    &.view-in {
+      & > span {
+        color: white;
+
+        &::before {
+          width: 100%;
+          margin-left: 100%;
+        }
+      }
+    }
+  }
+
   .title-svg {
     position: absolute;
     top: 45%;
@@ -136,6 +178,10 @@ export default {
 
   .view-4 {
     display: block;
+
+    p {
+      font-weight: 600;
+    }
   }
 
   .view-5 {

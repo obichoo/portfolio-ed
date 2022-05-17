@@ -154,15 +154,19 @@ export default {
   .more {
     width: 0px;
     overflow: hidden;
-    transition: all 0s ease 1s, width 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: all 0s ease .5s, width 1s cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 
     .q-mark {
       opacity: 0;
-      transition-delay: 2s;
+      transition-delay: 1.5s;
     }
 
     &.view-in--gt-half {
       width: 400px;
+
+      @include lg {
+        width: 200px;
+      }
 
       .q-mark {
         opacity: 1;
