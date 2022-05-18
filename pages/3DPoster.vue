@@ -9,11 +9,11 @@
     </div>
 
     <div class="page-view view-2 centered">
-      <p class="subtitle">I want to do 3D</p>
+      <p v-view.once class="subtitle">I want to do 3D</p>
     </div>
 
     <div class="page-view view-3 centered">
-      <p class="subtitle">So I do 3D with Cinema 4D</p>
+      <p v-view.once class="subtitle">So I do 3D with Cinema 4D</p>
     </div>
 
     <div class="page-view view-4 centered">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="page-view view-3 centered">
-      <p class="subtitle">
+      <p v-view.once class="subtitle">
         And after I use Octane Render to have a better render
       </p>
     </div>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="page-view view-5 centered">
-      <p class="subtitle">So I learned 3D</p>
+      <p v-view.once class="subtitle">So I learned 3D</p>
       <img src="/images/3d-poster/check.png" alt="" />
     </div>
 
@@ -81,11 +81,28 @@ export default {
 #threed_poster {
   .project-title {
     text-shadow: #ffd26a 0px 10px;
+
+    @include md {
+      font-size: 50px;
+    }
   }
 
   .project-title,
   p {
     font-family: "Flood";
+  }
+
+  p {
+    max-width: 80vw;
+    &.view-in {
+      animation: flip-in-hor-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s
+        both;
+    }
+
+    @include md {
+      font-size: 22px;
+      max-width: 80vw;
+    }
   }
 
   .view-4 {
@@ -105,6 +122,14 @@ export default {
   .view-5 {
     img {
       position: absolute;
+      width: 80vw;
+    }
+  }
+
+  #footer {
+    @include md {
+      padding: 70px 20px;
+      width: calc(100% - 40px);
     }
   }
 
@@ -153,6 +178,17 @@ export default {
     }
     100% {
       transform: translate(calc(-50% - 12px), calc(-50% - 12px));
+    }
+  }
+
+  @keyframes flip-in-hor-bottom {
+    0% {
+      transform: rotateX(80deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
     }
   }
 }

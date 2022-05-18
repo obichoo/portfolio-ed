@@ -31,10 +31,16 @@
     </div>
 
     <div class="page-view dark view-4">
-      <p class="subtitle">Ok so ?</p>
-      <p class="subtitle">I wanted to create a video about myself</p>
-      <p class="subtitle">So I take my camera and 2-3 friends to shoot me</p>
-      <p class="subtitle">Then I did some editing and this is the result</p>
+      <p v-view.once class="subtitle">Ok so ?</p>
+      <p v-view.once class="subtitle">
+        I wanted to create a video about myself
+      </p>
+      <p v-view.once class="subtitle">
+        So I take my camera and 2-3 friends to shoot me
+      </p>
+      <p v-view.once class="subtitle">
+        Then I did some editing and this is the result
+      </p>
     </div>
 
     <div class="page-view dark view-5">
@@ -81,6 +87,14 @@ export default {
 
 <style lang="scss" scoped>
 #video_resume {
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: black;
+
+  .view-1 {
+    background-color: white;
+  }
+
   .project-title {
     font-family: "Gilmer";
     font-weight: 900;
@@ -89,6 +103,10 @@ export default {
     text-align: center;
     transition: width 0.5s ease 1s;
     overflow: hidden;
+
+    @include md {
+      font-size: 40px;
+    }
 
     &.view-in {
       width: 1000px;
@@ -133,6 +151,7 @@ export default {
     &.play-btn {
       width: 650px;
       margin-left: -80px;
+      max-height: 80vh;
     }
 
     &.resume {
@@ -157,8 +176,16 @@ export default {
   }
 
   .view-3 {
+    @include xl {
+      min-height: max-content;
+    }
+
     img {
       width: 100%;
+
+      @include xl {
+        padding-bottom: 25%;
+      }
     }
   }
 
@@ -167,12 +194,39 @@ export default {
 
     p {
       font-weight: 600;
+      margin: auto;
+      white-space: nowrap;
+      transform: translateY(50vh);
+      transition: transform 0.5s ease;
+
+      @include lg {
+        font-size: 30px;
+      }
+
+      @include md {
+        font-size: 16px;
+      }
+
+      @include sm {
+        font-size: 14px;
+      }
+
+      &.view-in {
+        transform: translateY(0vh);
+      }
     }
   }
 
   .view-5 {
     display: flex;
     align-items: center;
+  }
+
+  #footer {
+    @include md {
+      padding: 70px 20px;
+      width: calc(100% - 40px);
+    }
   }
 }
 </style>

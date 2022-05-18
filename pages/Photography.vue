@@ -30,9 +30,7 @@
     </div>
 
     <div class="page-view view-3 centered">
-      <h2 v-view.once class="more">
-        More <span class="q-mark">?</span>
-      </h2>
+      <h2 v-view.once class="more">More <span class="q-mark">?</span></h2>
     </div>
 
     <div class="page-view view-4">
@@ -127,6 +125,9 @@ export default {
   }
 
   .view-2 {
+    @include lg {
+      padding-top: 25%;
+    }
     img {
       display: block;
 
@@ -149,7 +150,8 @@ export default {
   .more {
     width: 0px;
     overflow: hidden;
-    transition: all 0s ease .5s, width 1s cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    transition: all 0s ease 0.5s,
+      width 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     font-family: "Qaitan";
     font-size: 140px;
     white-space: nowrap;
@@ -163,7 +165,8 @@ export default {
       transition-delay: 1.5s;
     }
 
-    &.view-in--gt-half, &.view-in {
+    &.view-in--gt-half,
+    &.view-in {
       width: 400px;
 
       @include lg {

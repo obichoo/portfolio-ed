@@ -27,7 +27,7 @@
     </div>
 
     <div class="page-view view-4 dark centered">
-      <p class="subtitle">
+      <p v-view.once class="camera subtitle">
         Camera
         <img class="text-icon" src="/images/short-film/camera.png" alt="" />
       </p>
@@ -38,7 +38,7 @@
     </div>
 
     <div class="page-view view-6 dark centered">
-      <p class="subtitle">
+      <p v-view.once class="action subtitle">
         Action !
         <img class="text-icon" src="/images/short-film/action.png" alt="" />
       </p>
@@ -89,6 +89,11 @@ export default {
 
 <style lang="scss" scoped>
 #short_film {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#short_film {
   h1,
   p {
     font-family: "Gilbert";
@@ -102,10 +107,18 @@ export default {
     transition: all 1s ease 0.5s, opacity 0.1s ease 0.5s;
     transform: translate(-80vw, -40vh) rotate(-90deg);
 
+    @include lg {
+      width: 280px;
+    }
+
     h1 {
       font-size: 140px;
       white-space: nowrap;
       transform-origin: 0px 150px;
+
+      @include lg {
+        font-size: 70px;
+      }
     }
 
     &.view-in {
@@ -121,7 +134,7 @@ export default {
       &::after {
         opacity: 0;
       }
-      
+
       @keyframes clap {
         0% {
           transform: rotate(0deg);
@@ -156,6 +169,13 @@ export default {
         350px 0px 0px 0px rgb(245, 245, 245), 420px 0px 0px 0px black,
         490px 0px 0px 0px rgb(245, 245, 245);
       transform-origin: 0px 50px;
+
+      @include lg {
+        box-shadow: 35px 0px 0px 0px rgb(245, 245, 245), 70px 0px 0px 0px black,
+          105px 0px 0px 0px rgb(245, 245, 245), 140px 0px 0px 0px black,
+          175px 0px 0px 0px rgb(245, 245, 245), 210px 0px 0px 0px black,
+          245px 0px 0px 0px rgb(245, 245, 245);
+      }
     }
 
     &::after {
@@ -171,6 +191,10 @@ export default {
       left: 0;
       transform: rotate(0deg);
       transform-origin: 5px 50px;
+
+      @include lg {
+        height: 100px;
+      }
     }
   }
 
@@ -198,25 +222,130 @@ export default {
     background-size: 80%;
     position: relative;
     opacity: 0;
-    transition: opacity 0.3s linear 1s;
+    transition: opacity 0.3s linear 0.5s;
 
-    &.view-in--gt-half {
+    &.view-in--gt-half,
+    &.view-in {
       opacity: 1;
     }
   }
-}
 
-// @keyframes shine {
-//   0% {
-//     background-position-x: -500%;
-//   }
-//   50% {
-//     background-position-x: 500%;
-//   }
-//   100% {
-//     background-position-x: -500%;
-//   }
-// }
+  .camera.view-in {
+    animation: flicker-in 2s linear both;
+
+    @keyframes flicker-in {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 0;
+      }
+      11% {
+        opacity: 1;
+      }
+      12% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 0;
+      }
+      21% {
+        opacity: 1;
+      }
+      26% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 0;
+      }
+      31% {
+        opacity: 1;
+      }
+      35% {
+        opacity: 1;
+      }
+      36% {
+        opacity: 0;
+      }
+      45% {
+        opacity: 0;
+      }
+      41% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      55% {
+        opacity: 1;
+      }
+      57% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      61% {
+        opacity: 0;
+      }
+      65% {
+        opacity: 0;
+      }
+      66% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 1;
+      }
+      77% {
+        opacity: 0;
+      }
+      78% {
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      81% {
+        opacity: 0;
+      }
+      86% {
+        opacity: 0;
+      }
+      87% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  .action.view-in {
+    animation: slide-in-elliptic-top-fwd 0.7s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+
+    @keyframes slide-in-elliptic-top-fwd {
+      0% {
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% 1400px;
+        opacity: 1;
+      }
+    }
+  }
+
+  #footer {
+    @include md {
+      padding: 70px 20px;
+      width: calc(100% - 40px);
+    }
+  }
+}
 
 @keyframes bulb-light {
   0% {

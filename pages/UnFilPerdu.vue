@@ -133,6 +133,12 @@ export default {
 
   p {
     font-size: 90px;
+    max-width: 80vw;
+
+    @include md {
+      font-size: 45px;
+
+    }
   }
 
   .view-3 {
@@ -160,6 +166,13 @@ export default {
         margin-bottom: 50px;
         margin-top: 50px;
       }
+    }
+  }
+
+  #footer {
+    @include md {
+      padding: 70px 20px;
+      width: calc(100% - 40px);
     }
   }
 }
