@@ -23,10 +23,7 @@
     </div>
 
     <div class="page-view dark view-2 centered">
-      <h2 class="subtitle filmmaker" v-view.once>
-        <span class="part-one">I'm a filmmaker</span>
-        <span class="part-two">and ?</span>
-      </h2>
+      <h2 class="subtitle filmmaker" v-view.once>I'm a filmmaker and ?</h2>
     </div>
 
     <div class="page-view dark view-3">
@@ -102,39 +99,26 @@ export default {
     font-family: "Gilmer";
     position: relative;
     overflow: hidden;
+    color: black;
+    display: inline-block;
+    transition: color 0s linear 1.3s;
 
-    & > span {
-      color: black;
-      display: inline-block;
-      transition: color 0s linear 1.4s;
-
-      &.part-one::before {
-        transition: width 0.3s ease 1s, margin-left 0.3s ease 1.4s, color 0s linear 1.3s, right 0s linear 1.4s;
-      }
-
-      &.part-two::before {
-        transition: width 0.3s ease 1.7s, margin-left 0.3s ease 2.1s, color 0s linear 2s;
-      }
-    }
-
-    & > span::before {
+    &::before {
       content: "";
       position: absolute;
       width: 0%;
       margin-left: 0%;
       height: 48px;
       background-color: white;
+      transition: width 0.3s ease 1s, margin-left 0.3s ease 1.4s;
     }
 
     &.view-in {
-      & > span {
-        color: white;
+      color: white;
 
-        &.part-one::before {
-          width: 72%;
-          right: 28%;
-          margin-left: 100%;
-        }
+      &::before {
+        width: 100%;
+        margin-left: 100%;
       }
     }
   }
@@ -149,8 +133,6 @@ export default {
     &.play-btn {
       width: 650px;
       margin-left: -80px;
-      max-height: 80vh;
-
     }
 
     &.resume {
